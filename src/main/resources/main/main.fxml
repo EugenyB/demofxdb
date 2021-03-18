@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <top>
+       <VBox prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+                <TextField fx:id="nameField"/>
+                <TextField fx:id="lastNameField"/>
+                <TextField fx:id="ratingField"/>
+               <Button mnemonicParsing="false" text="Добавить" onAction="#addStudent"/>
+           </ToolBar>
+       </VBox>
+   </top>
+   <center>
+      <TableView fx:id="studentTable" prefHeight="435.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="50.0" text="#" />
+          <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Имя" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="250.0" text="Фамилия" />
+          <TableColumn fx:id="ratingColumn" prefWidth="50.0" text="Рейтинг" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
